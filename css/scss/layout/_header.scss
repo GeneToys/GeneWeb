@@ -1,0 +1,16 @@
+header {
+  @include sticky_top;
+  display: flex;
+  align-items: center;
+  padding: 16px 32px;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 1px solid #fff;
+  nav {
+    margin-left: auto;
+  }
+  .menu_list {
+    display: flex;
+    list-style-type: none;
+  }
+}
