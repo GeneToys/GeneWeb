@@ -80,8 +80,39 @@ header .menu_list {
   display: flex;
   list-style-type: none;
 }
+header .menu_list li a {
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+}
+header .menu_list li a:hover {
+  color: #fff;
+}
+header .menu_list li:not(:last-child) a {
+  margin-right: 30px;
+}
 
 .banner {
-  margin-top: -48px;
-  height: 600px;
+  margin-top: -49px;
+  height: 100vh;
+}
+.banner .vegas-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 49px;
+}
+.banner .vegas-content .banner_content {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 800px;
+  padding: 150px 90px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  text-align: center;
+  color: #fff;
+}
+.banner .vegas-content .banner_content_title {
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 30px;
 }

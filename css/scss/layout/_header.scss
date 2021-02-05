@@ -12,5 +12,17 @@ header {
   .menu_list {
     display: flex;
     list-style-type: none;
+    li {
+      a {
+        color: rgba($color: #fff, $alpha: 0.7);
+        display: block;
+        &:hover {
+          color: #fff;
+        }
+      }
+      &:not(:last-child) a {
+        margin-right: 30px;
+      }
+    }
   }
 }
