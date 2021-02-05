@@ -1,6 +1,6 @@
 $(".banner").vegas({
   slides: [ { src: "img/slider2.jpg" }],
-  overlay: "../node_modules/vegas/dist/overlays/02.png",
+  overlay: "../plugins/vegas/overlays/02.png",
   // 是否顯示下方時間bar
   timer: false,
   // 自動開始撥放
