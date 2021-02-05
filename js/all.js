@@ -1,3 +1,4 @@
+// banner - vegas輪播
 $(".banner").vegas({
   slides: [ { src: "img/slider2.jpg" }],
   overlay: "../plugins/vegas/overlays/02.png",
@@ -14,4 +15,8 @@ $(".banner").vegas({
   //圖片動畫
   animation: "random",
   animationDuration: "10000",
+});
+// loading page
+$(window).on('load',function(){
+  $('#loading_page').fadeOut();
 });

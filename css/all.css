@@ -58,6 +58,24 @@ a {
   text-decoration: unset;
 }
 
+#loading_page {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: radial-gradient(ellipse, #525252, #252525);
+  color: #757575;
+  z-index: 1021;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loading_page img {
+  margin-bottom: -30px;
+}
+
 body {
   font-family: "PingFang TC", "Helvetica Neue", "Helvetica", "Microsoft JhengHei", 微軟正黑體, "Arial", sans-serif;
 }
