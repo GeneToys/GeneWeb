@@ -1,3 +1,4 @@
+
 // banner - vegas輪播
 $(".banner").vegas({
   slides: [ { src: "img/slider2.jpg" }],
@@ -22,12 +23,9 @@ $(window).on('load',function(){
 });
 
 //監聽頭部是否sticky
-
 $(function () {
   checkHeaderIsSticky();
 });
-
-
 $(function () {
   $(window).on("scroll", function () {
     checkHeaderIsSticky();
@@ -42,3 +40,15 @@ function checkHeaderIsSticky() {
     $("header").addClass("is_sticky");
   }
 }
+
+//頭部click scroll to
+$(function () {
+  $('.menu_list a').on('click',function(e){
+    e.preventDefault();
+    let target = $(this).attr('href');
+    let targetToTop = $(target).offset().top;
+    $('html,body').animate({
+      scrollTop: targetToTop - 48,
+    },500);
+  });
+});
