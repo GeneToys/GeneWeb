@@ -3,6 +3,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -77,13 +79,15 @@ a {
 }
 
 body {
-  font-family: "PingFang TC", "Helvetica Neue", "Helvetica", "Microsoft JhengHei", 微軟正黑體, "Arial", sans-serif;
+  font-family: "PingFang TC", "Helvetica Neue", "EB Garamond", Noto Serif TC, "Microsoft JhengHei", 微軟正黑體, "Arial", sans-serif;
+  color: #1A1A1A;
 }
 
 header {
   position: sticky;
   top: 0;
   z-index: 1020;
+  font-family: "Helvetica", serif;
   display: flex;
   align-items: center;
   padding: 16px 32px;
@@ -107,6 +111,11 @@ header .menu_list li a:hover {
 }
 header .menu_list li:not(:last-child) a {
   margin-right: 30px;
+}
+header.is_sticky {
+  background: #192725;
+  border-bottom: 0;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.48);
 }
 
 .banner {
@@ -133,4 +142,52 @@ header .menu_list li:not(:last-child) a {
   font-weight: bold;
   font-size: 60px;
   margin-bottom: 30px;
+}
+.no_number {
+  font-size: 16px;
+}
+
+.index_section {
+  padding: 120px 0;
+}
+.index_section:nth-of-type(even) {
+  background-color: rgba(0, 142, 106, 0.1);
+}
+
+.index_section_title {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+.index_section_title .tw,
+.index_section_title .en {
+  writing-mode: vertical-lr;
+}
+.index_section_title .tw {
+  font-size: 36px;
+  padding-right: 20px;
+}
+.index_section_title .en {
+  color: #008E6A;
+  font-family: "Helvetica", serif;
+}
+
+.about_img {
+  background: center center/cover url(../img/me.jpg) no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+.about_title {
+  margin-bottom: 60px;
+}
+.about_content_wrap .about_text_title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.about_content_wrap .about_text {
+  font-size: 20px;
+  line-height: 1.8;
 }

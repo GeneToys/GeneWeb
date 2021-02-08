@@ -20,3 +20,25 @@ $(".banner").vegas({
 $(window).on('load',function(){
   $('#loading_page').fadeOut();
 });
+
+//監聽頭部是否sticky
+
+$(function () {
+  checkHeaderIsSticky();
+});
+
+
+$(function () {
+  $(window).on("scroll", function () {
+    checkHeaderIsSticky();
+  });
+});
+function checkHeaderIsSticky() {
+  let isStickyTop =
+    $("body").offset().top - $(window).scrollTop() == 0 ? true : false;
+  if (isStickyTop) {
+    $("header").removeClass("is_sticky");
+  } else {
+    $("header").addClass("is_sticky");
+  }
+}

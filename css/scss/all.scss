@@ -2,9 +2,11 @@
 @import "basic/reset";
 @import "basic/variable";
 @import "basic/mixin";
+@import "basic/font";
 
 //layout
 @import "layout/loading_page";
 @import "layout/layout";
 @import "layout/header";
 @import "layout/banner";
+@import "layout/index_content";
