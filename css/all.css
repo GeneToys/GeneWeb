@@ -158,6 +158,8 @@ header.is_sticky {
   display: flex;
   justify-content: center;
   font-weight: bold;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
 }
 .index_section_title .tw,
 .index_section_title .en {
@@ -179,9 +181,6 @@ header.is_sticky {
   border-radius: 50%;
   margin-left: auto;
 }
-.about_title {
-  margin-bottom: 60px;
-}
 .about_content_wrap .about_text_title {
   font-size: 32px;
   font-weight: bold;
@@ -190,4 +189,19 @@ header.is_sticky {
 .about_content_wrap .about_text {
   font-size: 20px;
   line-height: 1.8;
+}
+
+.skill_item {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #184e40;
+}
+.skill_item_name {
+  text-align: right;
+  font-family: "Helvetica", serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1A1A1A;
 }
