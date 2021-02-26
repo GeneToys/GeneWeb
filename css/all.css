@@ -142,7 +142,12 @@ header.is_sticky {
   font-weight: bold;
   font-size: 60px;
   margin-bottom: 30px;
+  font-family: "Helvetica", serif;
 }
+.banner .vegas-content .banner_content_text {
+  font-size: 20px;
+}
+
 .no_number {
   font-size: 16px;
 }
@@ -187,8 +192,57 @@ header.is_sticky {
   margin-bottom: 30px;
 }
 .about_content_wrap .about_text {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.8;
+}
+
+.experience_list {
+  position: relative;
+}
+.experience_list::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #008E6A;
+  display: block;
+}
+.experience_item {
+  border: 2px solid #008E6A;
+  margin-left: 30px;
+  padding: 20px;
+  position: relative;
+  font-size: 17px;
+  background: white;
+}
+.experience_item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.experience_item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #008E6A;
+  border-radius: 50%;
+  left: -31px;
+  top: -3px;
+  transform: translateX(-50%);
+  background: #e5f3f0;
+}
+.experience_item_title {
+  color: #192725;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.experience_item_position {
+  color: #008E6A;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .skill_item {
