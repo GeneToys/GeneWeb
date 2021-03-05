@@ -81,6 +81,7 @@ a {
 body {
   font-family: "PingFang TC", "Helvetica Neue", "EB Garamond", Noto Serif TC, "Microsoft JhengHei", 微軟正黑體, "Arial", sans-serif;
   color: #1A1A1A;
+  line-height: 1.8;
 }
 
 header {
@@ -94,6 +95,10 @@ header {
   color: #fff;
   font-weight: bold;
   border-bottom: 1px solid #fff;
+}
+header .logo a:hover {
+  color: #fff;
+  text-decoration: unset;
 }
 header nav {
   margin-left: auto;
@@ -119,7 +124,7 @@ header.is_sticky {
 }
 
 .banner {
-  margin-top: -49px;
+  margin-top: -61px;
   height: 100vh;
 }
 .banner .vegas-content {
@@ -146,6 +151,7 @@ header.is_sticky {
 }
 .banner .vegas-content .banner_content_text {
   font-size: 20px;
+  font-family: "Helvetica", serif;
 }
 
 .no_number {
@@ -210,12 +216,11 @@ header.is_sticky {
   display: block;
 }
 .experience_item {
-  border: 2px solid #008E6A;
   margin-left: 30px;
   padding: 20px;
   position: relative;
   font-size: 17px;
-  background: white;
+  background-image: linear-gradient(45deg, white, transparent);
 }
 .experience_item:not(:last-child) {
   margin-bottom: 30px;
@@ -240,22 +245,144 @@ header.is_sticky {
   margin-bottom: 10px;
 }
 .experience_item_position {
-  color: #008E6A;
+  color: #008e6a;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .skill_item {
-  text-align: center;
-  font-size: 20px;
   letter-spacing: 2px;
-  margin-bottom: 10px;
   color: #184e40;
+  height: 100%;
+  padding: 20px;
+  box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in;
+  overflow: hidden;
+}
+.skill_item_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill_item_img img {
+  transition: all 0.3s ease-in;
 }
 .skill_item_name {
-  text-align: right;
+  color: #1A1A1A;
+}
+.skill_item_title {
   font-family: "Helvetica", serif;
   font-size: 20px;
   font-weight: bold;
-  color: #1A1A1A;
+  color: #008E6A;
+}
+.skill_item_brief {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.skill_item:hover {
+  box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.3);
+}
+.skill_item:hover .skill_item_img img {
+  transform: scale(1.05) rotate(-5deg);
+}
+.skill_col {
+  margin-bottom: 30px;
+}
+
+.works_item {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  border-radius: 50px;
+}
+.works_item_1 {
+  background: center center/cover url(../img/fjall.jpg);
+}
+.works_item_2 {
+  background: center center/cover url(../img/fresh.jpg);
+}
+.works_item_3 {
+  background: center center/cover url(../img/linrg.jpg);
+}
+.works_item_4 {
+  background: center center/cover url(../img/ilovebaby.png);
+}
+.works_item_info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.works_item_title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.works_item:hover > .works_item_info {
+  opacity: 1;
+}
+
+.contact {
+  color: #fff;
+  background: center center url(../img/bg02.png) repeat;
+  background-attachment: fixed;
+}
+.contact a {
+  color: #fff;
+}
+.contact_info {
+  position: relative;
+  padding-bottom: 30px;
+  font-family: sans-serif;
+  letter-spacing: 1.5px;
+}
+.contact_info::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.contact_row {
+  display: flex;
+}
+.contact_link {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+}
+.contact_social {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.contact_social a {
+  text-decoration: unset !important;
+}
+.contact_social a:not(:last-child) {
+  padding-right: 20px;
+}
+.contact_copyright {
+  font-family: sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 10px;
+  line-height: 1;
 }

@@ -65,12 +65,12 @@
         }
     }
     &_item {
-        border: 2px solid $COLOR-THEME;
         margin-left: 30px;
         padding: 20px;
         position: relative;
         font-size: 17px;
-        background: white;
+        background-image: linear-gradient(45deg, white, transparent);
+
         &:not(:last-child) {
             margin-bottom: 30px;
         }
@@ -86,7 +86,6 @@
             top: -3px;
             transform: translateX(-50%);
             background: #e5f3f0;
-
         }
         &_title {
             color: #192725;
@@ -95,11 +94,10 @@
             margin-bottom: 10px;
         }
         &_position {
-            color: #008E6A;
+            color: #008e6a;
             margin-bottom: 10px;
             font-weight: bold;
         }
-
     }
 }
 
@@ -107,17 +105,147 @@
 
 .skill {
     &_item {
-        text-align: center;
-        font-size: 20px;
         letter-spacing: 2px;
-        margin-bottom: 10px;
         color: #184e40;
+        height: 100%;
+        padding: 20px;
+        box-shadow: 2px 2px 11px rgb(0 0 0 / 15%);
+        transition: all .3s ease-in;
+        overflow: hidden;
+        &_img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                transition: all .3s ease-in;
+            }
+        }
         &_name {
-            text-align: right;
+            color: $COLOR-FONT;
+        }
+        &_title {
             font-family: "Helvetica", serif;
             font-size: 20px;
             font-weight: bold;
-            color: $COLOR-FONT;
+            color: $COLOR-THEME;
         }
+        &_brief {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        &:hover {
+            box-shadow: 2px 2px 11px rgb(0 0 0 / 30%);
+            .skill_item_img img {
+                transform: scale(1.05) rotate(-5deg);
+            }
+        }
+    }
+    &_col {
+        margin-bottom: 30px;
+
+    }
+}
+
+//works
+.works {
+    &_item {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        transition: all 0.3s ease-in;
+        border-radius: 50px;
+        &_1 {
+            background: center center / cover url(../img/fjall.jpg);
+        }
+        &_2 {
+            background: center center / cover url(../img/fresh.jpg);
+        }
+        &_3 {
+            background: center center / cover url(../img/linrg.jpg);
+        }
+        &_4 {
+            background: center center / cover url(../img/ilovebaby.png);
+        }
+        &_info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backdrop-filter: blur(3px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+        &_title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        &:hover {
+            > .works_item_info {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//contact
+
+.contact {
+    color: #fff;
+    a {
+        color: #fff;
+    }
+    background: center center url(../img/bg02.png) repeat;
+    background-attachment: fixed;
+    &_info {
+        position: relative;
+        padding-bottom: 30px;
+        font-family:  sans-serif;
+        letter-spacing: 1.5px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 15px;
+            height: 1px;
+            background: rgba(#fff, 0.4);
+        }
+    }
+    &_row {
+        display: flex;
+    }
+    &_link {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: right;
+    }
+    &_social {
+
+        font-size: 30px;
+        a {
+            text-decoration: unset !important;
+            &:not(:last-child) {
+                padding-right: 20px;
+            }
+        }
+        margin-bottom: 10px;
+    }
+    &_copyright {
+        font-family:  sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        font-size: 10px;
+        line-height: 1;
     }
 }
