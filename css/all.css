@@ -255,7 +255,6 @@ header.is_sticky {
   color: #184e40;
   height: 100%;
   padding: 20px;
-  box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease-in;
   overflow: hidden;
 }
@@ -279,9 +278,6 @@ header.is_sticky {
 .skill_item_brief {
   list-style-type: disc;
   padding-left: 20px;
-}
-.skill_item:hover {
-  box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.3);
 }
 .skill_item:hover .skill_item_img img {
   transform: scale(1.05) rotate(-5deg);
