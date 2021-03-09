@@ -9,3 +9,12 @@
 @mixin backdrop_blur {
     backdrop-filter: blur(5px);
 }
+
+//grid
+
+//pad {
+@mixin pad {
+    @media (max-width: 991px) {
+        @content;
+    }
+}

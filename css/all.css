@@ -110,6 +110,7 @@ header .menu_list {
 header .menu_list li a {
   color: rgba(255, 255, 255, 0.7);
   display: block;
+  font-size: 14px;
 }
 header .menu_list li a:hover {
   color: #fff;
@@ -153,6 +154,19 @@ header.is_sticky {
   font-size: 20px;
   font-family: "Helvetica", serif;
 }
+@media (max-width: 991px) {
+  .banner .vegas-content .banner_content {
+    width: 500px;
+    padding: 50px 80px;
+  }
+  .banner .vegas-content .banner_content_title {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .banner .vegas-content .banner_content_text {
+    font-size: 16px;
+  }
+}
 
 .no_number {
   font-size: 16px;
@@ -163,6 +177,11 @@ header.is_sticky {
 }
 .index_section:nth-of-type(even) {
   background-color: rgba(0, 142, 106, 0.1);
+}
+@media (max-width: 991px) {
+  .index_section {
+    padding: 80px 0;
+  }
 }
 
 .index_section_title {
@@ -184,6 +203,18 @@ header.is_sticky {
   color: #008E6A;
   font-family: "Helvetica", serif;
 }
+@media (max-width: 991px) {
+  .index_section_title {
+    margin-bottom: 30px;
+  }
+  .index_section_title .tw {
+    font-size: 28px;
+    padding-right: 0;
+  }
+  .index_section_title .en {
+    font-size: 12px;
+  }
+}
 
 .about_img {
   background: center center/cover url(../img/me.jpg) no-repeat;
@@ -192,14 +223,31 @@ header.is_sticky {
   border-radius: 50%;
   margin-left: auto;
 }
+@media (max-width: 991px) {
+  .about_img {
+    width: 200px;
+    height: 200px;
+  }
+}
 .about_content_wrap .about_text_title {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
 }
+@media (max-width: 991px) {
+  .about_content_wrap .about_text_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
 .about_content_wrap .about_text {
   font-size: 18px;
   line-height: 1.8;
+}
+@media (max-width: 991px) {
+  .about_content_wrap .about_text {
+    font-size: 16px;
+  }
 }
 
 .experience_list {
@@ -242,19 +290,22 @@ header.is_sticky {
   color: #192725;
   font-weight: 800;
   font-size: 18px;
-  margin-bottom: 10px;
 }
 .experience_item_position {
   color: #008e6a;
-  margin-bottom: 10px;
   font-weight: bold;
+}
+@media (max-width: 991px) {
+  .experience_item {
+    font-size: 16px;
+  }
 }
 
 .skill_item {
   letter-spacing: 2px;
   color: #184e40;
   height: 100%;
-  padding: 20px;
+  padding: 8px 0;
   transition: all 0.3s ease-in;
   overflow: hidden;
 }
@@ -266,6 +317,12 @@ header.is_sticky {
 .skill_item_img img {
   transition: all 0.3s ease-in;
 }
+@media (max-width: 991px) {
+  .skill_item_img img {
+    max-width: 100px;
+    margin-bottom: 15px;
+  }
+}
 .skill_item_name {
   color: #1A1A1A;
 }
@@ -274,6 +331,11 @@ header.is_sticky {
   font-size: 20px;
   font-weight: bold;
   color: #008E6A;
+}
+@media (max-width: 991px) {
+  .skill_item_title {
+    text-align: center;
+  }
 }
 .skill_item_brief {
   list-style-type: disc;
@@ -314,8 +376,8 @@ header.is_sticky {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   justify-content: center;
