@@ -6,7 +6,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
-        margin-top: 49px;
+        margin-top: 0px;
         .banner_content {
             @include backdrop_blur;
             width: 800px;
@@ -33,6 +33,13 @@
                 }
                 &_text {
                     font-size: 16px;
+                }
+            }
+            @include mobile {
+                width: 300px;
+                padding: 30px 30px;
+                &_title {
+                    font-size: 26px;
                 }
             }
         }

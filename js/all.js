@@ -52,3 +52,23 @@ $(function () {
     },500);
   });
 });
+
+//頭部手機選單toggle
+$(function () {
+  $('.menu_toggle').on('click',function(e){
+    e.preventDefault();
+    toggleMenuList(e);
+    $(document).one('click',function(){
+      hideMenuList();
+    });
+  });
+
+});
+
+function toggleMenuList(e) {
+  e.stopPropagation();
+  $('.menu_list').toggle();
+}
+function hideMenuList() {
+  $('.menu_list').hide();
+}

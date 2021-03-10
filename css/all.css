@@ -106,6 +106,7 @@ header nav {
 header .menu_list {
   display: flex;
   list-style-type: none;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.48);
 }
 header .menu_list li a {
   color: rgba(255, 255, 255, 0.7);
@@ -115,8 +116,42 @@ header .menu_list li a {
 header .menu_list li a:hover {
   color: #fff;
 }
+@media (max-width: 767px) {
+  header .menu_list li a {
+    padding: 5px;
+  }
+}
 header .menu_list li:not(:last-child) a {
   margin-right: 30px;
+}
+@media (max-width: 767px) {
+  header .menu_list li:not(:last-child) a {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 767px) {
+  header .menu_list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    background: #192725;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    display: none;
+  }
+}
+header .menu_toggle {
+  display: none;
+}
+header .menu_toggle:hover {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  header .menu_toggle {
+    display: block;
+  }
 }
 header.is_sticky {
   background: #192725;
@@ -133,7 +168,7 @@ header.is_sticky {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 49px;
+  margin-top: 0px;
 }
 .banner .vegas-content .banner_content {
   -webkit-backdrop-filter: blur(5px);
@@ -167,6 +202,15 @@ header.is_sticky {
     font-size: 16px;
   }
 }
+@media (max-width: 767px) {
+  .banner .vegas-content .banner_content {
+    width: 300px;
+    padding: 30px 30px;
+  }
+  .banner .vegas-content .banner_content_title {
+    font-size: 26px;
+  }
+}
 
 .no_number {
   font-size: 16px;
@@ -181,6 +225,11 @@ header.is_sticky {
 @media (max-width: 991px) {
   .index_section {
     padding: 80px 0;
+  }
+}
+@media (max-width: 767px) {
+  .index_section {
+    padding: 50px 0;
   }
 }
 
@@ -229,6 +278,12 @@ header.is_sticky {
     height: 200px;
   }
 }
+@media (max-width: 767px) {
+  .about_img {
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+}
 .about_content_wrap .about_text_title {
   font-size: 32px;
   font-weight: bold;
@@ -238,6 +293,11 @@ header.is_sticky {
   .about_content_wrap .about_text_title {
     font-size: 24px;
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .about_content_wrap .about_text_title {
+    font-size: 22px;
   }
 }
 .about_content_wrap .about_text {
@@ -311,8 +371,8 @@ header.is_sticky {
 }
 .skill_item_img {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 .skill_item_img img {
   transition: all 0.3s ease-in;
@@ -320,7 +380,11 @@ header.is_sticky {
 @media (max-width: 991px) {
   .skill_item_img img {
     max-width: 100px;
-    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .skill_item_img {
+    justify-content: center;
   }
 }
 .skill_item_name {
@@ -332,8 +396,9 @@ header.is_sticky {
   font-weight: bold;
   color: #008E6A;
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .skill_item_title {
+    font-size: 18px;
     text-align: center;
   }
 }
@@ -341,11 +406,31 @@ header.is_sticky {
   list-style-type: disc;
   padding-left: 20px;
 }
+@media (max-width: 767px) {
+  .skill_item_brief {
+    font-size: 14px;
+  }
+}
 .skill_item:hover .skill_item_img img {
   transform: scale(1.05) rotate(-5deg);
 }
+@media (max-width: 767px) {
+  .skill_item {
+    border-bottom: 1px solid rgba(0, 142, 106, 0.1);
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+}
 .skill_col {
   margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .skill_col {
+    margin-bottom: 0px;
+  }
+  .skill_col:first-child .skill_item {
+    padding-top: 0;
+  }
 }
 
 .works_item {
@@ -389,6 +474,13 @@ header.is_sticky {
 .works_item_title {
   font-size: 24px;
   font-weight: bold;
+  font-family: "微軟正黑體", sans-serif;
+}
+@media (max-width: 991px) {
+  .works_item_title {
+    font-size: 16px;
+    font-weight: normal;
+  }
 }
 .works_item:hover > .works_item_info {
   opacity: 1;
