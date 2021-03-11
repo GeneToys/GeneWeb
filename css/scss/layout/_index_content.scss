@@ -155,6 +155,9 @@
                 @include pad {
                     max-width: 100px;
                 }
+                @include mobile {
+                    margin-bottom: 10px;
+                }
             }
             @include mobile {
                 justify-content: center;
@@ -187,8 +190,8 @@
         }
         @include mobile {
             border-bottom: 1px solid rgba(0, 142, 106, 0.1);
-            padding-top: 20px;
-            padding-bottom: 15px;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
     }
     &_col {
@@ -248,11 +251,17 @@
                 font-size: 16px;
                 font-weight: normal;
             }
+            @include mobile {
+                font-size: 14px;
+            }
         }
         &:hover {
             > .works_item_info {
                 opacity: 1;
             }
+        }
+        @include mobile {
+            border-radius: 15px;
         }
     }
 }
@@ -283,6 +292,7 @@
     }
     &_row {
         display: flex;
+        flex-wrap: wrap;
     }
     &_link {
         margin-left: auto;
@@ -290,6 +300,11 @@
         flex-direction: column;
         justify-content: flex-end;
         text-align: right;
+        @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-top: 30px;
+        }
     }
     &_social {
         font-size: 30px;
@@ -300,6 +315,7 @@
             }
         }
         margin-bottom: 10px;
+
     }
     &_copyright {
         font-family: sans-serif;
