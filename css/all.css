@@ -79,7 +79,7 @@ a {
 }
 
 body {
-  font-family: "PingFang TC", "Helvetica Neue", "EB Garamond", Noto Serif TC, "Microsoft JhengHei", 微軟正黑體, "Arial", sans-serif;
+  font-family: "Helvetica Neue", "EB Garamond", "PingFang TC", Noto Serif TC, "Microsoft JhengHei", 微軟正黑體, "Arial", sans-serif;
   color: #1A1A1A;
   line-height: 1.8;
 }
@@ -328,7 +328,7 @@ header.is_sticky {
   padding: 20px;
   position: relative;
   font-size: 17px;
-  background-image: linear-gradient(45deg, white, transparent);
+  background-image: linear-gradient(45deg, white, rgba(255, 255, 255, 0));
 }
 .experience_item:not(:last-child) {
   margin-bottom: 30px;
