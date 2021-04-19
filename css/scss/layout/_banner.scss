@@ -5,7 +5,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         margin-top: 0px;
         .banner_content {
             @include backdrop_blur;
@@ -16,16 +16,19 @@
             color: #fff;
             &_title {
                 font-weight: bold;
-                font-size: 60px;
-                margin-bottom: 30px;
-                font-family: "Helvetica", serif;
+                font-size: 50px;
             }
             &_text {
                 font-size: 20px;
                 font-family: "Helvetica", serif;
+                color: $COLOR_THEME;
+                letter-spacing: 10px;
+                @include pad {
+                    letter-spacing: 5px;
+                }
             }
             @include pad {
-                width: 500px;
+                width: 600px;
                 padding: 50px 80px;
                 &_title {
                     font-size: 30px;
@@ -39,7 +42,10 @@
                 width: 300px;
                 padding: 30px 30px;
                 &_title {
-                    font-size: 26px;
+                    font-size: 20px;
+                }
+                &_text {
+                    font-size: 12px;
                 }
             }
         }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -79,8 +78,8 @@ a {
 }
 
 body {
-  font-family: "Helvetica Neue", "EB Garamond", Noto Serif TC, "PingFang TC", "Microsoft JhengHei", 微軟正黑體, "Arial", sans-serif;
-  color: #1A1A1A;
+  font-family: "Helvetica Neue", "EB Garamond", "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", "Microsoft JhengHei", "Arial", sans-serif;
+  color: #1a1a1a;
   line-height: 1.8;
 }
 
@@ -181,17 +180,22 @@ header.is_sticky {
 }
 .banner .vegas-content .banner_content_title {
   font-weight: bold;
-  font-size: 60px;
-  margin-bottom: 30px;
-  font-family: "Helvetica", serif;
+  font-size: 50px;
 }
 .banner .vegas-content .banner_content_text {
   font-size: 20px;
   font-family: "Helvetica", serif;
+  color: #008e6a;
+  letter-spacing: 10px;
+}
+@media (max-width: 991px) {
+  .banner .vegas-content .banner_content_text {
+    letter-spacing: 5px;
+  }
 }
 @media (max-width: 991px) {
   .banner .vegas-content .banner_content {
-    width: 500px;
+    width: 600px;
     padding: 50px 80px;
   }
   .banner .vegas-content .banner_content_title {
@@ -208,7 +212,10 @@ header.is_sticky {
     padding: 30px 30px;
   }
   .banner .vegas-content .banner_content_title {
-    font-size: 26px;
+    font-size: 20px;
+  }
+  .banner .vegas-content .banner_content_text {
+    font-size: 12px;
   }
 }
 
@@ -246,10 +253,9 @@ header.is_sticky {
 }
 .index_section_title .tw {
   font-size: 36px;
-  padding-right: 20px;
 }
 .index_section_title .en {
-  color: #008E6A;
+  color: #008e6a;
   font-family: "Helvetica", serif;
 }
 @media (max-width: 991px) {
@@ -262,6 +268,11 @@ header.is_sticky {
   }
   .index_section_title .en {
     font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .index_section_title .tw {
+    font-size: 20px;
   }
 }
 
@@ -288,6 +299,8 @@ header.is_sticky {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
+  font-family: serif;
+  position: relative;
 }
 @media (max-width: 991px) {
   .about_content_wrap .about_text_title {
@@ -298,6 +311,21 @@ header.is_sticky {
 @media (max-width: 767px) {
   .about_content_wrap .about_text_title {
     font-size: 22px;
+  }
+}
+.about_content_wrap .about_text_title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(45deg, rgba(0, 142, 106, 0.1), transparent);
+  left: -15px;
+  bottom: 0;
+}
+@media (max-width: 767px) {
+  .about_content_wrap .about_text_title::after {
+    left: 0;
+    height: 20px;
   }
 }
 .about_content_wrap .about_text {
@@ -320,7 +348,7 @@ header.is_sticky {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #008E6A;
+  background-color: #008e6a;
   display: block;
 }
 .experience_item {
@@ -339,7 +367,7 @@ header.is_sticky {
   display: block;
   width: 15px;
   height: 15px;
-  border: 2px solid #008E6A;
+  border: 2px solid #008e6a;
   border-radius: 50%;
   left: -31px;
   top: -3px;
@@ -365,14 +393,20 @@ header.is_sticky {
   letter-spacing: 2px;
   color: #184e40;
   height: 100%;
-  padding: 8px 0;
+  padding: 20px 30px;
   transition: all 0.3s ease-in;
   overflow: hidden;
+  background-color: rgba(0, 142, 106, 0.1);
+}
+.skill_item > .row {
+  align-items: center;
+  height: 100%;
 }
 .skill_item_img {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
+  padding-right: 0;
 }
 .skill_item_img img {
   transition: all 0.3s ease-in;
@@ -389,41 +423,37 @@ header.is_sticky {
 }
 @media (max-width: 767px) {
   .skill_item_img {
-    justify-content: center;
+    justify-content: left;
   }
 }
 .skill_item_name {
-  color: #1A1A1A;
+  color: #1a1a1a;
 }
 .skill_item_title {
   font-family: "Helvetica", serif;
   font-size: 20px;
   font-weight: bold;
-  color: #008E6A;
+  color: #008e6a;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .skill_item_title {
     font-size: 18px;
-    text-align: center;
   }
 }
 .skill_item_brief {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
 }
 @media (max-width: 767px) {
   .skill_item_brief {
     font-size: 14px;
   }
 }
-.skill_item:hover .skill_item_img img {
-  transform: scale(1.05) rotate(-5deg);
-}
 @media (max-width: 767px) {
   .skill_item {
-    border-bottom: 1px solid rgba(0, 142, 106, 0.1);
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 }
 .skill_col {
@@ -431,10 +461,7 @@ header.is_sticky {
 }
 @media (max-width: 767px) {
   .skill_col {
-    margin-bottom: 0px;
-  }
-  .skill_col:first-child .skill_item {
-    padding-top: 0;
+    margin-bottom: 8px;
   }
 }
 
@@ -446,7 +473,7 @@ header.is_sticky {
   display: block;
   overflow: hidden;
   transition: all 0.3s ease-in;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 .works_item_1 {
   background: center center/cover url(../img/fjall.jpg);
@@ -477,9 +504,8 @@ header.is_sticky {
   transition: all 0.3s ease-out;
 }
 .works_item_title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  font-family: "微軟正黑體", sans-serif;
 }
 @media (max-width: 991px) {
   .works_item_title {
