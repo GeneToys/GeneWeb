@@ -29,7 +29,7 @@ header {
           color: #fff;
         }
         @include mobile {
-         padding: 5px;
+          padding: 5px;
         }
       }
       &:not(:last-child) a {
@@ -38,14 +38,13 @@ header {
           margin-right: 0px;
         }
       }
-
     }
     @include mobile {
       box-shadow: 0px 0px 6px 3px rgb(0 0 0 / 48%);
       position: absolute;
       left: 0;
       right: 0;
-      top: 60px;
+      top: 57px;
       background: #192725;
       display: block;
       text-align: center;
