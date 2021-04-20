@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -81,6 +82,11 @@ body {
   font-family: "Helvetica Neue", "EB Garamond", "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", "Microsoft JhengHei", "Arial", sans-serif;
   color: #1a1a1a;
   line-height: 1.8;
+}
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 header {
@@ -310,7 +316,7 @@ header.is_sticky {
 }
 @media (max-width: 767px) {
   .about_content_wrap .about_text_title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .about_content_wrap .about_text_title::after {
@@ -335,6 +341,11 @@ header.is_sticky {
 @media (max-width: 991px) {
   .about_content_wrap .about_text {
     font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .about_content_wrap .about_text {
+    font-size: 14px;
   }
 }
 
@@ -379,6 +390,11 @@ header.is_sticky {
   font-weight: 800;
   font-size: 18px;
 }
+@media (max-width: 767px) {
+  .experience_item_title {
+    font-size: 16px;
+  }
+}
 .experience_item_position {
   color: #008e6a;
   font-weight: bold;
@@ -386,6 +402,11 @@ header.is_sticky {
 @media (max-width: 991px) {
   .experience_item {
     font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .experience_item {
+    font-size: 14px;
   }
 }
 
@@ -438,6 +459,11 @@ header.is_sticky {
 @media (max-width: 991px) {
   .skill_item_title {
     font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .skill_item_title {
+    font-size: 16px;
   }
 }
 .skill_item_brief {
@@ -584,4 +610,57 @@ header.is_sticky {
   letter-spacing: 0.05em;
   font-size: 10px;
   line-height: 1;
+}
+
+#to-top {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: fixed;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  background: rgba(0, 142, 106, 0.6);
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#to-top:hover {
+  background-color: rgba(0, 142, 106, 0.7);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #008e6a;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #fff;
+  font-size: 18px;
+}
+
+.swiper-button-next:after {
+  content: "";
+}
+
+.swiper-button-prev:after {
+  content: "";
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  pointer-events: initial;
 }

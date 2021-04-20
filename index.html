@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="plugins/vegas/vegas.min.css" />
   <!-- Bootstrap -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+  <!-- animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- all.css -->
   <link rel="stylesheet" href="css/all.css" />
 </head>
@@ -16,6 +21,8 @@
 <body>
 
   <header>
+
+
     <div class="logo">
       <a href="index.html">
         <h1>GENE BLOG</h1>
@@ -46,7 +53,7 @@
   </header>
   <main>
     <div class="banner">
-      <div class="banner_content">
+      <div class="banner_content wow animate__animated animate__fadeIn">
         <h2 class="banner_content_title">
           專心致志，簡單生活
         </h2>
@@ -65,14 +72,15 @@
         <div class="about_content_wrap">
           <div class="row align-items-center flex-md-row-reverse">
             <div class="col-md-4 ">
-              <div class="about_img">
+              <div class="about_img wow animate__animated  animate__fadeIn">
               </div>
             </div>
             <div class="col-md-8">
-              <h4 class="about_text_title">
+              <h4 class="about_text_title wow animate__animated  animate__fadeInLeft" data-wow-duration="2s"
+                data-wow-delay="0.5s">
                 — Do or Do Not. There is no Try!
               </h4>
-              <p class="about_text">
+              <p class="about_text wow animate__animated  animate__fadeIn">
                 我是黃敬中，是個在地的新北樹林人，對我而言，人的一生只要專心做好一件事就足夠了！<br>
                 畢業於淡江大學資管系，雖是本科系畢業，但在大學求學過程的挫折讓我對 Coding
                 這件事心灰意冷，2018年7月因緣際會下透過朋友重新接觸了網頁前端的技術，自學的過程中，重拾了對網頁技術的熱情，並開啟了我的前端之路。<br>
@@ -94,26 +102,26 @@
           <span class="en">EXPERIENCE</span>
         </h3>
         <ul class="experience_list">
-          <li class="experience_item">
+          <li class="experience_item wow animate__animated  animate__fadeIn" data-wow-delay="0.5s">
             <h4 class="experience_item_title">
               松山高級中學 - 2008～2011
             </h4>
             <div class="experience_item_position">普通科</div>
           </li>
-          <li class="experience_item">
+          <li class="experience_item wow animate__animated  animate__fadeIn" data-wow-delay="1s">
             <h4 class="experience_item_title">
               淡江大學 - 2011～2016
             </h4>
             <div class="experience_item_position">資訊管理學系</div>
           </li>
-          <li class="experience_item">
+          <li class="experience_item wow animate__animated  animate__fadeIn" data-wow-delay="1.5s">
             <h4 class="experience_item_title">
               仕農雷射 - 2018/03～2018/12
             </h4>
             <div class="experience_item_position">排版人員</div>
             CAD圖轉雷射加工程式等軟體操作
           </li>
-          <li class="experience_item">
+          <li class="experience_item wow animate__animated  animate__fadeIn" data-wow-delay="2s">
             <h4 class="experience_item_title">
               易碩數位資訊 - 2019/03～至今
             </h4>
@@ -130,7 +138,7 @@
           </span>
           <span class="en">SKILL</span>
         </h3>
-        <div class="skill_content_wrap">
+        <div class="skill_content_wrap wow animate__animated  animate__fadeIn">
           <div class="row ">
             <div class="skill_col col-lg-6">
               <div class="skill_item">
@@ -295,48 +303,60 @@
           </span>
           <span class="en">WORKS</span>
         </h3>
-        <div class="row">
-          <div class="col-6 col-md-3 my-3 ">
-            <a href="https://www.fjallravenasia.com/" target="_blank" title='Fjällräven'
-              class="works_item works_item_1">
-              <div class="works_item_info">
-                <div class="works_item_title">
-                  Fjällräven
+        <!-- Slider main container -->
+        <div class="swiper-container row wow animate__animated  animate__fadeIn">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a href="https://www.fjallravenasia.com/" target="_blank" title='Fjällräven'
+                class="works_item works_item_1">
+                <div class="works_item_info">
+                  <div class="works_item_title">
+                    Fjällräven
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-3 my-3 ">
-            <a href="https://www.freshmackerel.com/" target="_blank" title='新合發鯖魚' class="works_item works_item_2">
-              <div class="works_item_info">
-                <div class="works_item_title">
-                  新合發鯖魚
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.freshmackerel.com/" target="_blank" title='新合發鯖魚' class="works_item works_item_2">
+                <div class="works_item_info">
+                  <div class="works_item_title">
+                    新合發鯖魚
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.linrg.com/" target="_blank" title='成就希望工程' class="works_item works_item_3">
+                <div class="works_item_info">
+                  <div class="works_item_title">
+                    成就希望工程
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="https://www.ilovebaby.com.tw/" target="_blank" title='親子良品' class="works_item works_item_4">
+                <div class="works_item_info">
+                  <div class="works_item_title">
+                    親子良品
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
 
-          <div class="col-6 col-md-3 my-3 ">
-            <a href="https://www.linrg.com/" target="_blank" title='成就希望工程' class="works_item works_item_3">
-              <div class="works_item_info">
-                <div class="works_item_title">
-                  成就希望工程
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-3 my-3 ">
-            <a href="https://www.ilovebaby.com.tw/" target="_blank" title='親子良品' class="works_item works_item_4">
-              <div class="works_item_info">
-                <div class="works_item_title">
-                  親子良品
-                </div>
-              </div>
-            </a>
-          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
+
+
+  </main>
+  <footer>
     <section id="contact" class="contact index_section">
       <div class="container">
         <h3 class="contact_title index_section_title">
@@ -344,6 +364,7 @@
           </span>
           <span class="en">CONTACT</span>
         </h3>
+
         <div class="contact_row">
           <div class="contact_info">
             <div class='mb-3'>
@@ -376,22 +397,30 @@
       </div>
 
     </section>
-
-  </main>
-  <footer></footer>
+  </footer>
   <div id="loading_page">
     <img src="img/loading.svg" alt="">
+  </div>
+  <div id="to-top">
+    <i class="fas fa-angle-up"></i>
   </div>
   <!-- Font Awesome 5  -->
   <script src="https://kit.fontawesome.com/dc2eb8754c.js" crossorigin="anonymous"></script>
   <!-- jQuery -->
   <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
   <!-- Vegas Slider -->
   <script src="plugins/vegas/vegas.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- wow.js -->
+  <script src="plugins/WOW-master/dist/wow.min.js"></script>
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- all.js -->
   <script src="js/all.js"></script>
+
+
 </body>
 
 </html>

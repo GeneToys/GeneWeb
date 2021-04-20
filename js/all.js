@@ -1,7 +1,7 @@
 
 // banner - vegas輪播
 $(".banner").vegas({
-  slides: [ { src: "img/slider2.jpg" }],
+  slides: [{ src: "img/slider2.jpg" }],
   overlay: "../plugins/vegas/overlays/02.png",
   // 是否顯示下方時間bar
   timer: false,
@@ -18,7 +18,7 @@ $(".banner").vegas({
   animationDuration: "10000",
 });
 // loading page
-$(window).on('load',function(){
+$(window).on('load', function () {
   $('#loading_page').fadeOut();
 });
 
@@ -43,22 +43,22 @@ function checkHeaderIsSticky() {
 
 //頭部click scroll to
 $(function () {
-  $('.menu_list a').on('click',function(e){
+  $('.menu_list a').on('click', function (e) {
     e.preventDefault();
     let target = $(this).attr('href');
     let targetToTop = $(target).offset().top;
     $('html,body').animate({
       scrollTop: targetToTop - 48,
-    },500);
+    }, 500);
   });
 });
 
 //頭部手機選單toggle
 $(function () {
-  $('.menu_toggle').on('click',function(e){
+  $('.menu_toggle').on('click', function (e) {
     e.preventDefault();
     toggleMenuList(e);
-    $(document).one('click',function(){
+    $(document).one('click', function () {
       hideMenuList();
     });
   });
@@ -72,3 +72,46 @@ function toggleMenuList(e) {
 function hideMenuList() {
   $('.menu_list').hide();
 }
+
+//to top 
+
+$(function () {
+  $('#to-top').on('click', function () {
+    toTop();
+  });
+});
+function toTop() {
+  $('body,html').animate({ scrollTop: 0 }, 800);
+}
+
+//wow.js
+new WOW().init();
+
+//swiper {
+const swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    }
+  }
+})
