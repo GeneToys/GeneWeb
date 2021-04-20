@@ -444,7 +444,8 @@ header.is_sticky {
 }
 @media (max-width: 767px) {
   .skill_item_img {
-    justify-content: left;
+    justify-content: center;
+    padding-right: 15px;
   }
 }
 .skill_item_name {
@@ -480,6 +481,7 @@ header.is_sticky {
     padding: 20px;
     margin-left: -15px;
     margin-right: -15px;
+    text-align: center;
   }
 }
 .skill_col {

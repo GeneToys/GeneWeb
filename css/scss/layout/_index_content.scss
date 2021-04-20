@@ -194,7 +194,8 @@
                 }
             }
             @include mobile {
-                justify-content: left;
+                justify-content: center;
+                padding-right: 15px;
             }
         }
         &_name {
@@ -224,6 +225,7 @@
             padding: 20px;
             margin-left: -15px;
             margin-right: -15px;
+            text-align: center;
         }
     }
     &_col {
