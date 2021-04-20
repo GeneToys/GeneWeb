@@ -502,7 +502,7 @@ header.is_sticky {
   border-radius: 20px;
 }
 .works_item_1 {
-  background: center center/cover url(../img/fjall.jpg);
+  background: center center/cover url(../img/fjall.png);
 }
 .works_item_2 {
   background: center center/cover url(../img/fresh.jpg);
@@ -512,6 +512,15 @@ header.is_sticky {
 }
 .works_item_4 {
   background: center center/cover url(../img/ilovebaby.png);
+}
+.works_item_5 {
+  background: center center/cover url(../img/tierone.svg);
+}
+.works_item_6 {
+  background: center center/cover url(../img/florihana.jpeg);
+}
+.works_item_7 {
+  background: center center/cover url(../img/173.png);
 }
 .works_item_info {
   position: absolute;
@@ -529,6 +538,11 @@ header.is_sticky {
   opacity: 0;
   transition: all 0.3s ease-out;
 }
+@media (max-width: 991px) {
+  .works_item_info {
+    opacity: 1;
+  }
+}
 .works_item_title {
   font-size: 20px;
   font-weight: bold;
@@ -536,7 +550,6 @@ header.is_sticky {
 @media (max-width: 991px) {
   .works_item_title {
     font-size: 16px;
-    font-weight: normal;
   }
 }
 @media (max-width: 767px) {
