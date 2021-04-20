@@ -530,6 +530,7 @@ header.is_sticky {
   bottom: 0;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
