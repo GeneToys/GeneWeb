@@ -489,7 +489,7 @@ header.is_sticky {
 }
 @media (max-width: 767px) {
   .skill_col {
-    margin-bottom: 8px;
+    margin-bottom: 3px;
   }
 }
 
