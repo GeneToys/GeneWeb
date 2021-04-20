@@ -640,6 +640,7 @@ header.is_sticky {
   color: #fff;
   transition: all 0.3s ease;
   cursor: pointer;
+  z-index: 1;
 }
 #to-top:hover {
   background-color: rgba(0, 142, 106, 0.7);
