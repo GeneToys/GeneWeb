@@ -524,6 +524,15 @@ header.is_sticky {
 .works_item_7 {
   background: center center/cover url(../img/173.png);
 }
+.works_item_8 {
+  background: center center/cover url(../img/kao.png);
+}
+.works_item_9 {
+  background: center center/cover url(../img/hamburger.png);
+}
+.works_item_10 {
+  background: center center/cover url(../img/todo.jpeg);
+}
 .works_item_info {
   position: absolute;
   top: 0;
@@ -557,6 +566,7 @@ header.is_sticky {
 @media (max-width: 767px) {
   .works_item_title {
     font-size: 14px;
+    padding: 10px;
   }
 }
 .works_item:hover > .works_item_info {

@@ -268,6 +268,15 @@
         &_7 {
             background: center center / cover url(../img/173.png);
         }
+        &_8 {
+            background: center center / cover url(../img/kao.png);
+        }
+        &_9 {
+            background: center center / cover url(../img/hamburger.png);
+        }
+        &_10 {
+            background: center center / cover url(../img/todo.jpeg);
+        }
 
         &_info {
             position: absolute;
@@ -296,6 +305,7 @@
             }
             @include mobile {
                 font-size: 14px;
+                padding: 10px;
             }
         }
         &:hover {
