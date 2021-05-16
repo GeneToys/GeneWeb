@@ -533,6 +533,9 @@ header.is_sticky {
 .works_item_10 {
   background: center center/cover url(../img/todo.jpeg);
 }
+.works_item_11 {
+  background: center center/cover url(../img/bg-blur.jpeg);
+}
 .works_item_info {
   position: absolute;
   top: 0;
