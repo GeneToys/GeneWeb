@@ -431,3 +431,7 @@
 .swiper-button-prev.swiper-button-disabled {
     pointer-events: initial;
 }
+
+.swiper-container {
+    overflow: hidden;
+}
