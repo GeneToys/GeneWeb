@@ -1,0 +1,442 @@
+.no_number {
+  font-size: 16px;
+}
+.index_section {
+  padding: 120px 0;
+  &:nth-of-type(even) {
+    background-color: rgba($color: $COLOR-THEME, $alpha: 0.1);
+  }
+  @include pad {
+    padding: 80px 0;
+  }
+  @include mobile {
+    padding: 50px 0;
+  }
+}
+.index_section_title {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  .tw,
+  .en {
+    writing-mode: vertical-lr;
+  }
+  .tw {
+    font-size: 36px;
+  }
+  .en {
+    color: $COLOR_THEME;
+    font-family: "Helvetica", serif;
+  }
+  @include pad {
+    margin-bottom: 30px;
+    .tw {
+      font-size: 28px;
+      padding-right: 0;
+    }
+    .en {
+      font-size: 12px;
+    }
+  }
+  @include mobile {
+    .tw {
+      font-size: 20px;
+    }
+  }
+}
+//about
+.about {
+  &_img {
+    background: center center / cover url(../imgs/me.jpg) no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: auto;
+    @include pad {
+      width: 200px;
+      height: 200px;
+    }
+    @include mobile {
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  &_content_wrap {
+    .about_text_title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      font-family: serif;
+      position: relative;
+      @include pad {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      @include mobile {
+        font-size: 20px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        background-image: linear-gradient(
+          45deg,
+          rgba(0, 142, 106, 0.1),
+          transparent
+        );
+        left: -15px;
+        bottom: 0;
+        @include mobile {
+          left: 0;
+          height: 20px;
+        }
+      }
+    }
+    .about_text {
+      font-size: 18px;
+      line-height: 1.8;
+      @include pad {
+        font-size: 16px;
+      }
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//experience
+.experience {
+  &_list {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: $COLOR-THEME;
+      display: block;
+    }
+  }
+  &_item {
+    margin-left: 30px;
+    padding: 20px;
+    position: relative;
+    font-size: 17px;
+    background-image: linear-gradient(45deg, white, rgba(255, 255, 255, 0));
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 15px;
+      height: 15px;
+      border: 2px solid $COLOR-THEME;
+      border-radius: 50%;
+      left: -31px;
+      top: -3px;
+      transform: translateX(-50%);
+      background: #e5f3f0;
+    }
+    &_title {
+      color: #192725;
+      font-weight: 800;
+      font-size: 18px;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+    &_position {
+      color: #008e6a;
+      font-weight: bold;
+    }
+    @include pad {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+}
+
+//skill
+
+.skill {
+  &_item {
+    letter-spacing: 2px;
+    color: #184e40;
+    height: 100%;
+    padding: 20px 30px;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    background-color: rgba(0, 142, 106, 0.1);
+    > .row {
+      align-items: center;
+      height: 100%;
+    }
+    &_img {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-right: 0;
+      img {
+        transition: all 0.3s ease-in;
+        @include pad {
+          max-width: 100px;
+        }
+        @include mobile {
+          margin-bottom: 10px;
+        }
+      }
+      @include mobile {
+        justify-content: center;
+        padding-right: 15px;
+      }
+    }
+    &_name {
+      color: $COLOR-FONT;
+    }
+    &_title {
+      font-family: "Helvetica", serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: $COLOR-THEME;
+      @include pad {
+        font-size: 18px;
+      }
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+    &_brief {
+      list-style-type: none;
+      padding-left: 0;
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    @include mobile {
+      padding: 20px;
+      margin-left: -15px;
+      margin-right: -15px;
+      text-align: center;
+    }
+  }
+  &_col {
+    margin-bottom: 30px;
+    @include mobile {
+      margin-bottom: 3px;
+    }
+  }
+}
+
+//works
+.works {
+  &_item {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    border-radius: 20px;
+    &_1 {
+      background: center center / cover url(../imgs/fjall.png);
+    }
+    &_2 {
+      background: center center / cover url(../imgs/fresh.jpg);
+    }
+    &_3 {
+      background: center center / cover url(../imgs/linrg.jpg);
+    }
+    &_4 {
+      background: center center / cover url(../imgs/ilovebaby.png);
+    }
+    &_5 {
+      background: center center / cover url(../imgs/tierone.svg);
+    }
+    &_6 {
+      background: center center / cover url(../imgs/florihana.jpeg);
+    }
+    &_7 {
+      background: center center / cover url(../imgs/173.png);
+    }
+    &_8 {
+      background: center center / cover url(../imgs/kao.png);
+    }
+    &_9 {
+      background: center center / cover url(../imgs/hamburger.png);
+    }
+    &_10 {
+      background: center center / cover url(../imgs/todo.jpeg);
+    }
+    &_11 {
+      background: center center / cover url(../imgs/bg-blur.jpeg);
+    }
+
+    &_info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+      @include pad {
+        opacity: 1;
+      }
+    }
+    &_title {
+      font-size: 20px;
+      font-weight: bold;
+      // font-family: "Microsoft JhengHei", sans-serif;
+      @include pad {
+        font-size: 16px;
+      }
+      @include mobile {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+    &:hover {
+      > .works_item_info {
+        opacity: 1;
+      }
+    }
+    @include mobile {
+      border-radius: 15px;
+    }
+  }
+}
+
+//contact
+
+.contact {
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  background: center center url(../imgs/bg02.png) repeat;
+  background-attachment: fixed;
+  &_info {
+    position: relative;
+    padding-bottom: 30px;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 15px;
+      height: 1px;
+      background: rgba(#fff, 0.4);
+    }
+  }
+  &_row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &_link {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    @include mobile {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  }
+  &_social {
+    font-size: 30px;
+    a {
+      text-decoration: unset !important;
+      &:not(:last-child) {
+        padding-right: 20px;
+      }
+    }
+    margin-bottom: 10px;
+  }
+  &_copyright {
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 10px;
+    line-height: 1;
+  }
+}
+
+#to-top {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: fixed;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  background: rgba(0, 142, 106, 0.6);
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    background-color: rgba(0, 142, 106, 0.7);
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: $COLOR-THEME;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #fff;
+  font-size: 18px;
+}
+
+.swiper-button-next:after {
+  content: "\f105";
+}
+.swiper-button-prev:after {
+  content: "\f104";
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  pointer-events: initial;
+  display: none;
+}
+
+.swiper-container {
+  overflow: hidden;
+}
