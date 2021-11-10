@@ -5,7 +5,7 @@ $(".banner").vegas({
   slides: [{
     src: "./imgs/slider2.jpg"
   }],
-  overlay: "../imgs/02.png",
+  overlay: "./imgs/02.png",
   // 是否顯示下方時間bar
   timer: false,
   // 自動開始撥放
